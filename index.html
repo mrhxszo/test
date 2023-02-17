@@ -7,7 +7,7 @@
   
       <script>
   
-          let a = Array.from({length: 100}, (x, i) => i);
+          let a = Array.from({length: 1000}, (x, i) => i/10);
           let alpha = 45;
           let v = 50;
           let b = a.map(e => Math.sin(e));//-1 / 2 * 9.81 * Math.pow( Math.pow(e,2)/ v * Math.cos(alpha), 2) + e * Math.tan(alpha));  //-1/2*g*(x^2/vcosa)^2+x*tg(a)
@@ -19,7 +19,7 @@
   
           y: b,
   
-          mode: 'markers',
+          mode: 'lines',
   
           type: 'scatter'
   

@@ -1,0 +1,33 @@
+<head>
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js" charset="utf-8">
+    </script>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+  
+      <script>
+  
+          let a = Array.from({length: 100}, (x, i) => i);
+          let alpha = 45;
+          let v = 50;
+          let b = a.map(e => Math.sin(e));//-1 / 2 * 9.81 * Math.pow( Math.pow(e,2)/ v * Math.cos(alpha), 2) + e * Math.tan(alpha));  //-1/2*g*(x^2/vcosa)^2+x*tg(a)
+  
+          console.log(a)
+         let trace1 = {
+  
+          x: a,
+  
+          y: b,
+  
+          mode: 'markers',
+  
+          type: 'scatter'
+  
+          };
+  
+          var data = [trace1];
+  
+  
+          Plotly.newPlot('myDiv', data);
+      </script>
+  </body>
